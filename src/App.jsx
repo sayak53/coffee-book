@@ -1,8 +1,10 @@
 function App() {
   return (
-    <div className="h-screen flex items-center justify-center bg-base-200">
-      <button className="btn btn-primary">Hello DaisyUI 🌼</button>
-    </div>
+    <>
+      <div className="h-screen flex items-center justify-center bg-base-200">
+        <button className="btn btn-primary">Hello DaisyUI 🌼</button>
+      </div>
+    </>
   );
 }
 
