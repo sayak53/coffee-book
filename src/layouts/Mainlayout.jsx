@@ -1,13 +1,17 @@
+import { Outlet } from "react-router-dom";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 
 const Mainlayout = () => {
   return (
     <div>
-      {/* navbar */}
+      {/* Navbar */}
       <Navbar />
-      <div className="min-h-[calc(100vh-421px)]"></div>
-      {/* footer */}
+      <div className="min-h-[calc(100vh-229px)] py-12">
+        {/* Dynamic section */}
+        <Outlet />
+      </div>
+      {/* Footer */}
       <Footer />
     </div>
   );
