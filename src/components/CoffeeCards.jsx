@@ -1,8 +1,9 @@
-import { useLoaderData, useParams } from "react-router-dom";
+import { useLoaderData, useNavigate, useParams } from "react-router-dom";
 import Card from "./Card";
 import { useEffect, useState } from "react";
 
 const CoffeeCards = () => {
+  const navigate = useNavigate();
   const data = useLoaderData();
   console.log(data);
   // eslint-disable-next-line no-unused-vars
@@ -15,15 +16,20 @@ const CoffeeCards = () => {
       );
       setCoffees(filteredByCategory);
     } else {
-      setCoffees(data);
+      setCoffees(data.slice(0, 6));
     }
   }, [category, data]);
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-      {coffees.map((coffee) => (
-        <Card key={coffee.id} coffee={coffee} />
-      ))}
-    </div>
+    <>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+        {coffees.map((coffee) => (
+          <Card key={coffee.id} coffee={coffee} />
+        ))}
+      </div>
+      <button className="btn btn-warning" onClick={() => navigate("/coffees")}>
+        View All
+      </button>
+    </>
   );
 };
 
