@@ -4,7 +4,12 @@ const Categories = ({ categories }) => {
   return (
     <div role="tablist" className="tabs tabs-lift w-full flex justify-around">
       {categories.map((category) => (
-        <Link key={category.category} to="/category" role="tab" className="tab">
+        <Link
+          key={category.category}
+          to={`/category/${category.category}`}
+          role="tab"
+          className="tab"
+        >
           {category.category}
         </Link>
       ))}
