@@ -14,7 +14,7 @@ const Home = () => {
         }
       />
       {/* categories tab section */}
-      <div role="tablist" className="tabs tabs-lift">
+      <div role="tablist" className="tabs tabs-lift w-full flex justify-around">
         <a role="tab" className="tab">
           Tab 1
         </a>
