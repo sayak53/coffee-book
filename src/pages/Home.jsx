@@ -1,7 +1,10 @@
+import { useLoaderData } from "react-router-dom";
 import Banner from "../components/Banner";
 import Heading from "../components/Heading";
+import Categories from "../components/Categories";
 
 const Home = () => {
+  const categories = useLoaderData();
   return (
     <div>
       {/* banner */}
@@ -14,17 +17,7 @@ const Home = () => {
         }
       />
       {/* categories tab section */}
-      <div role="tablist" className="tabs tabs-lift w-full flex justify-around">
-        <a role="tab" className="tab">
-          Tab 1
-        </a>
-        <a role="tab" className="tab tab-active">
-          Tab 2
-        </a>
-        <a role="tab" className="tab">
-          Tab 3
-        </a>
-      </div>
+      <Categories categories={categories} />
       {/* dynamic nested component */}
     </div>
   );
