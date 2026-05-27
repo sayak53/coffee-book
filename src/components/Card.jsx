@@ -9,7 +9,7 @@ const Card = ({ coffee }) => {
         to={`/coffees/${id}`}
         className="transition duration-300 hover:scale-105 hover:shadow-2xl rounded-2xl overflow-hidden cursor-pointer"
       >
-        <figure className="w-full h-48 overflow-hidden rounded-t-2xl">
+        <figure className="w-full h-48 lg:h-56 overflow-hidden rounded-t-2xl">
           <img className="" src={image} alt="" />
         </figure>
         <div className="p-4">
