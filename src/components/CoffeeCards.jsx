@@ -5,8 +5,7 @@ import { useEffect, useState } from "react";
 const CoffeeCards = () => {
   const navigate = useNavigate();
   const data = useLoaderData();
-  console.log(data);
-  // eslint-disable-next-line no-unused-vars
+
   const { category } = useParams();
   const [coffees, setCoffees] = useState([]);
   useEffect(() => {
@@ -21,7 +20,7 @@ const CoffeeCards = () => {
   }, [category, data]);
   return (
     <>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 my-12">
         {coffees.map((coffee) => (
           <Card key={coffee.id} coffee={coffee} />
         ))}
