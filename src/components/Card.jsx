@@ -7,9 +7,9 @@ const Card = ({ coffee }) => {
     <div className="flex-relative transition duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer">
       <Link
         to={`/coffees/${id}`}
-        className="transition duration-300 hover:scale-105 hover:shadow-2xl rounded-xl overflow-hidden cursor-pointer"
+        className="transition duration-300 hover:scale-105 hover:shadow-2xl rounded-2xl overflow-hidden cursor-pointer"
       >
-        <figure className="w-full h-48 overflow-hidden">
+        <figure className="w-full h-48 overflow-hidden rounded-t-2xl">
           <img className="" src={image} alt="" />
         </figure>
         <div className="p-4">
