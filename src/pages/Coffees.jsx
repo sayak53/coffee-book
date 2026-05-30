@@ -1,8 +1,22 @@
 import { useLoaderData } from "react-router-dom";
 import Card from "../components/Card";
+import { useState } from "react";
 
 const Coffees = () => {
   const data = useLoaderData();
+  const [coffees, setCoffees] = useState(data);
+
+  const handleSort = (sortby) => {
+    if (sortby === "popularity") {
+      //sort by popularity
+      const sorted = [...data].sort((a, b) => b.popularity - a.popularity);
+      setCoffees(sorted);
+    } else if (sortby === "rating") {
+      //sortby rating
+      const sorted = [...data].sort((a, b) => b.rating - a.rating);
+      setCoffees(sorted);
+    }
+  };
   return (
     <>
       <div className="flex justify-between items-center">
@@ -12,16 +26,22 @@ const Coffees = () => {
           </h1>
         </div>
         <div className="space-x-4">
-          <button className="btn btn-warning font-bold text-black">
+          <button
+            onClick={() => handleSort("popularity")}
+            className="btn btn-warning font-bold text-black"
+          >
             Sort by Popularity
           </button>
-          <button className="btn btn-warning font-bold text-black">
+          <button
+            onClick={() => handleSort("rating")}
+            className="btn btn-warning font-bold text-black"
+          >
             Sort by Rating
           </button>
         </div>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 my-12 w-[95%] mx-auto">
-        {data.map((coffee) => (
+        {coffees.map((coffee) => (
           <Card key={coffee.id} coffee={coffee} />
         ))}
       </div>
