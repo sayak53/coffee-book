@@ -19,13 +19,13 @@ const Coffees = () => {
   };
   return (
     <>
-      <div className="flex justify-between items-center">
+      <div className="flex flex-col md:flex-row justify-between items-center gap-6">
         <div>
-          <h1 className="text-3xl font-thin">
+          <h1 className="text-2xl md:text-3xl text-center md:text-left font-thin">
             Sort Coffee&apos;s by Popularity and Rating-&gt;
           </h1>
         </div>
-        <div className="space-x-4">
+        <div className="flex flex-col sm:flex-row gap-3">
           <button
             onClick={() => handleSort("popularity")}
             className="btn btn-warning font-bold text-black"
