@@ -4,13 +4,13 @@ const Card = ({ coffee }) => {
   const { name, image, category, origin, type, id, rating, popularity } =
     coffee || {};
   return (
-    <div className="flex-relative transition duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer">
+    <div className="h-full relative">
       <Link
         to={`/coffees/${id}`}
-        className="transition duration-300 hover:scale-105 hover:shadow-2xl rounded-2xl overflow-hidden cursor-pointer"
+        className="h-full block transition duration-300 hover:scale-105 hover:shadow-2xl rounded-2xl overflow-hidden cursor-pointer"
       >
         <figure className="w-full h-48 lg:h-56 overflow-hidden rounded-t-2xl">
-          <img className="" src={image} alt="" />
+          <img className="w-full h-full object-cover" src={image} alt="" />
         </figure>
         <div className="p-4">
           <h1 className="text-xl">Name: {name}</h1>

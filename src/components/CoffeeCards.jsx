@@ -20,7 +20,7 @@ const CoffeeCards = () => {
   }, [category, data]);
   return (
     <>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 my-12 w-[95%] mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-6 my-12 w-[95%] mx-auto">
         {coffees.map((coffee) => (
           <Card key={coffee.id} coffee={coffee} />
         ))}
