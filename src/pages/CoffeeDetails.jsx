@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
 import nutritionImg from "../assets/nutrition.png";
+import { addFavourite } from "../utils";
 const CoffeeDetails = () => {
   const data = useLoaderData();
   const { id } = useParams();
@@ -19,6 +20,11 @@ const CoffeeDetails = () => {
     rating,
     popularity,
   } = coffee;
+
+  //handleFavourite Function
+  const handleFavourite = (coffee) => {
+    addFavourite(coffee);
+  };
   return (
     <div className="">
       {/* Description */}
@@ -35,7 +41,10 @@ const CoffeeDetails = () => {
           <p className="text-base">Rating: {rating}</p>
         </div>
         <div>
-          <button className="btn btn-warning font-bold text-black">
+          <button
+            onClick={() => handleFavourite(coffee)}
+            className="btn btn-warning font-bold text-black"
+          >
             Add Favourite
           </button>
         </div>
