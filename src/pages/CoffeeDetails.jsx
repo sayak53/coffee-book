@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
 import nutritionImg from "../assets/nutrition.png";
-import { addFavourite } from "../utils";
+import { addFavourite, getAllFavourites } from "../utils";
 const CoffeeDetails = () => {
   const data = useLoaderData();
   const { id } = useParams();
