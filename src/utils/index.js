@@ -15,6 +15,8 @@ const getAllFavourites = () => {
 const addFavourite = coffee => {
     //get all previously saved coffee data
     const favourites = getAllFavourites()
+    const isExists = favourites.find(item => item.id == coffee.id)
+    if (isExists) return alert('Already Exists')
     favourites.push(coffee)
     localStorage.setItem('favourites',JSON.stringify(favourites))
 }
