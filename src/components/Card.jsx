@@ -1,6 +1,7 @@
-import { Link } from "react-router-dom";
-
+import { Link, useLocation } from "react-router-dom";
+import { FaTrash } from "react-icons/fa";
 const Card = ({ coffee }) => {
+  const { pathname } = useLocation();
   const { name, image, category, origin, type, id, rating, popularity } =
     coffee || {};
   return (
@@ -21,6 +22,11 @@ const Card = ({ coffee }) => {
           <p>Popularity: {popularity}</p>
         </div>
       </Link>
+      {pathname === "/dashboard" && (
+        <div className="absolute p-3 bg-warning rounded-full cursor-pointer -top-5 -right-5">
+          <FaTrash />
+        </div>
+      )}
     </div>
   );
 };
