@@ -27,7 +27,10 @@ const CoffeeCards = () => {
       </div>
       <button
         className="btn btn-warning font-bold text-black"
-        onClick={() => navigate("/coffees")}
+        onClick={() => {
+          window.scrollTo(0, 0);
+          navigate("/coffees");
+        }}
       >
         View All
       </button>
