@@ -8,6 +8,7 @@ const Card = ({ coffee, handleRemove }) => {
     <div className="h-full relative">
       <Link
         to={`/coffees/${id}`}
+        onClick={() => window.scrollTo(0, 0)}
         className="h-full block transition duration-300 hover:scale-105 hover:shadow-2xl rounded-2xl overflow-hidden cursor-pointer"
       >
         <figure className="w-full h-48 lg:h-56 overflow-hidden rounded-t-2xl">
