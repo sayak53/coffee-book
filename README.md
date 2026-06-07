@@ -1,16 +1,86 @@
-# React + Vite
+# ☕ Coffee Book
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern coffee discovery web application built with React, Vite, Tailwind CSS, DaisyUI, and React Router.
 
-Currently, two official plugins are available:
+## 🌐 Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+https://amazing-coffee-book.netlify.app/
 
-## React Compiler
+## ✨ Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* Browse coffees by category
+* View detailed coffee information
+* Sort coffees by popularity
+* Sort coffees by rating
+* Add coffees to favorites
+* Manage favorites through dashboard
+* Remove coffees from dashboard
+* Responsive design
+* Client-side routing with React Router
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* React
+* Vite
+* JavaScript
+* React Router
+* Tailwind CSS
+* DaisyUI
+* React Icons
+* Netlify
+
+## 📁 Project Structure
+
+```text
+src/
+├── assets/
+├── components/
+├── layouts/
+├── pages/
+├── routes/
+└── utils/
+```
+
+## 🚀 Getting Started
+
+Clone the repository:
+
+```bash
+git clone https://github.com/sayak53/coffee-book.git
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run the development server:
+
+```bash
+npm run dev
+```
+
+Build for production:
+
+```bash
+npm run build
+```
+
+Preview production build:
+
+```bash
+npm run preview
+```
+
+## 📌 Future Improvements
+
+* Search coffees by name
+* Filter by category
+* Dark mode support
+* Enhanced animations
+* Additional coffee varieties
+
+## 👨‍💻 Author
+
+Sayak Chakraborty
